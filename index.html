@@ -2,6 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- In-browser diagnostic console -->
+    <script>
+        window.addEventListener('error', function(e) {
+            var consoleBox = document.getElementById('debug-console');
+            if (!consoleBox) {
+                consoleBox = document.createElement('div');
+                consoleBox.id = 'debug-console';
+                consoleBox.style.cssText = 'position:fixed;bottom:20px;left:20px;z-index:99999;background:rgba(220,53,69,0.95);color:white;padding:15px;border-radius:6px;max-height:250px;overflow-y:auto;font-family:monospace;font-size:12px;box-shadow:0 10px 30px rgba(0,0,0,0.5);border:1px solid #ff8888;';
+                document.body.appendChild(consoleBox);
+            }
+            var div = document.createElement('div');
+            div.style.marginBottom = '5px';
+            div.style.borderBottom = '1px solid rgba(255,255,255,0.2)';
+            div.style.paddingBottom = '5px';
+            div.innerText = '❌ Error: ' + e.message + '\nFile: ' + e.filename.split('/').pop() + ':' + e.lineno;
+            consoleBox.appendChild(div);
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Queen's Pod | Bali-Inspired Eco-Luxury Riverside Cafe & Restaurant, Gangtok</title>
     

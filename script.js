@@ -3,7 +3,7 @@
  * SPA Routing, 360 Panorama Drag-to-Scroll, Ambient Audio, Dynamic Menu, Lightbox, & Bookings
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initializeApp() {
     
     // ==========================================================================
     // 1. SPA ROUTING CONTROLLER
@@ -247,12 +247,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetBlock = document.getElementById(`section-${targetCategory}`);
             if (targetBlock) {
                 targetBlock.classList.add('active');
+                
+                // Smoothly scroll down slightly to focus on the section block if menu-controls is sticky
+                const menuControls = document.querySelector('.menu-controls-wrapper');
+                const menuControlsHeight = menuControls ? menuControls.offsetHeight : 0;
+                const blockTop = targetBlock.offsetTop - menuControlsHeight - 80;
+                window.scrollTo({ top: blockTop, behavior: 'smooth' });
             }
-            
-            // Smoothly scroll down slightly to focus on the section block if menu-controls is sticky
-            const menuControls = document.querySelector('.menu-controls-wrapper');
-            const blockTop = targetBlock.offsetTop - menuControls.offsetHeight - 80;
-            window.scrollTo({ top: blockTop, behavior: 'smooth' });
         });
     });
 
@@ -531,4 +532,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+    initializeApp();
+}
