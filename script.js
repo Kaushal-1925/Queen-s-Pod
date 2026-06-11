@@ -429,14 +429,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const hasPet = document.getElementById('resPet').checked;
             const specialRequests = document.getElementById('resRequests').value.trim();
 
+            // Basic HTML escaping to prevent XSS
+            function escapeHTML(str) {
+                if (!str) return '';
+                return str.replace(/[&<>'"]/g, 
+                    tag => ({
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;',
+                        "'": '&#39;',
+                        '"': '&quot;'
+                    }[tag] || tag)
+                );
+            }
+
             // Structure Booking Receipt recap layout
             bookingRecap.innerHTML = `
-                <p><strong>Guest Name:</strong> <span>${name}</span></p>
-                <p><strong>Phone:</strong> <span>${phone}</span></p>
-                <p><strong>Date & Time:</strong> <span>${date} @ ${time}</span></p>
-                <p><strong>Party Size:</strong> <span>${guests} Guests</span></p>
+                <p><strong>Guest Name:</strong> <span>${escapeHTML(name)}</span></p>
+                <p><strong>Phone:</strong> <span>${escapeHTML(phone)}</span></p>
+                <p><strong>Date & Time:</strong> <span>${escapeHTML(date)} @ ${escapeHTML(time)}</span></p>
+                <p><strong>Party Size:</strong> <span>${escapeHTML(guests)} Guests</span></p>
                 <p><strong>Bringing Pet:</strong> <span>${hasPet ? 'Yes, 🐾' : 'No'}</span></p>
-                ${specialRequests ? `<p><strong>Requests:</strong> <span>${specialRequests}</span></p>` : ''}
+                ${specialRequests ? `<p><strong>Requests:</strong> <span>${escapeHTML(specialRequests)}</span></p>` : ''}
             `;
 
             // Format WhatsApp prefilled message string
