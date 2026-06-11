@@ -429,6 +429,44 @@ document.addEventListener('DOMContentLoaded', () => {
             const hasPet = document.getElementById('resPet').checked;
             const specialRequests = document.getElementById('resRequests').value.trim();
 
+            // Send email notification via Web3Forms in the background
+            // The user can get their free access key from https://web3forms.com/
+            const web3FormsAccessKey = '49265f24-2c09-4089-aba6-2a783a450a80'; // Default placeholder/Web3Forms Key - replace with your actual key if needed
+            
+            if (web3FormsAccessKey && web3FormsAccessKey !== 'YOUR_ACCESS_KEY_HERE') {
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        access_key: web3FormsAccessKey,
+                        subject: `New Table Reservation: ${name} (${guests} Guests)`,
+                        from_name: "Queen's Pod Website",
+                        name: name,
+                        phone: phone,
+                        email: email,
+                        date: date,
+                        time: time,
+                        guests: guests,
+                        bringing_pet: hasPet ? 'Yes 🐾' : 'No',
+                        special_requests: specialRequests
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log('Reservation email sent successfully!');
+                    } else {
+                        console.warn('Web3Forms returned an error:', data);
+                    }
+                })
+                .catch(error => {
+                    console.error('Failed to send reservation email:', error);
+                });
+            }
+
             // Basic HTML escaping to prevent XSS
             function escapeHTML(str) {
                 if (!str) return '';
