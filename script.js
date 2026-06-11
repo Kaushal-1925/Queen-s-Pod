@@ -48,10 +48,6 @@ function initializeApp() {
         }
     }
 
-    window.addEventListener('hashchange', handleRouting);
-    // Initial route check on page load
-    handleRouting();
-
     // Mobile Hamburger Menu Toggle
     menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
@@ -531,7 +527,10 @@ function initializeApp() {
             resForm.reset();
         });
     }
-
+    // Set up routing and run initial check
+    window.addEventListener('hashchange', handleRouting);
+    // Initial route check on page load
+    handleRouting();
 }
 
 if (document.readyState === 'loading') {
