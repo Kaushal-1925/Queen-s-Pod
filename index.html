@@ -63,7 +63,7 @@
              ============================================== -->
         <section id="home" class="page-section active">
             <!-- Hero Section -->
-            <div class="hero-section" style="background-image: linear-gradient(rgba(10, 25, 18, 0.3), rgba(10, 25, 18, 0.6)), url('assets/founders.png');">
+            <div class="hero-section" style="background-image: linear-gradient(rgba(10, 25, 18, 0.3), rgba(10, 25, 18, 0.6)), url('assets/hero_background.png');">
                 <div class="hero-content">
                     <h1 class="hero-title">Where the River Sings,<br><span class="highlight">Flavours Dance</span></h1>
                     <p class="hero-subtitle">Gangtok's finest Bali-inspired eco-luxury riverside escape. Dine suspended over the flowing Ranikhola stream inside glowing glass domes.</p>
@@ -367,15 +367,12 @@
                     <!-- Category Tab Navigation -->
                     <div class="category-tabs-nav" id="categoryTabsNav">
                         <button class="tab-nav-btn active" data-target="sikkimese">Sikkimese Specials</button>
-                        <button class="tab-nav-btn" data-target="starters">Starters</button>
-                        <button class="tab-nav-btn" data-target="oriental">Oriental</button>
-                        <button class="tab-nav-btn" data-target="italian">Italian</button>
+                        <button class="tab-nav-btn" data-target="starters">Starters & Appetizers</button>
+                        <button class="tab-nav-btn" data-target="oriental">Oriental & Chinese</button>
+                        <button class="tab-nav-btn" data-target="italian">Italian Wood-Fired</button>
                         <button class="tab-nav-btn" data-target="northindian">North Indian</button>
-                        <button class="tab-nav-btn" data-target="chinese">Chinese</button>
-                        <button class="tab-nav-btn" data-target="korean">Korean</button>
-                        <button class="tab-nav-btn" data-target="biryani">Biryani</button>
-                        <button class="tab-nav-btn" data-target="seafood">Seafood</button>
-                        <button class="tab-nav-btn" data-target="desserts">Desserts</button>
+                        <button class="tab-nav-btn" data-target="korean">Korean Specials</button>
+                        <button class="tab-nav-btn" data-target="bar">Drinks & Lounge</button>
                     </div>
                 </div>
             </div>
@@ -485,105 +482,187 @@
                     </div>
                 </div>
 
-                <!-- 2. Starters -->
+                <!-- 2. Starters & Appetizers -->
                 <div id="section-starters" class="menu-section-block">
-                    <h3 class="menu-section-heading">Appetizers & Starters</h3>
+                    <h3 class="menu-section-heading">Starters & Appetizers</h3>
                     <div class="menu-items-grid">
-                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
                             <div class="menu-item-left">
-                                <span class="diet-dot veg-dot"></span>
+                                <img src="assets/chicken_romani_tikka_card.png" alt="Chicken Romani Tikka" class="item-thumbnail">
+                                <span class="diet-dot nonveg-dot"></span>
                                 <div class="item-title-desc">
-                                    <h4>Mexican Garlic Bread <span class="badge-signature">Signature</span></h4>
-                                    <p>Warm baguette slices slathered in garlic butter, baked with jalapenos, corn, and cheese.</p>
+                                    <h4>Chicken Romani Tikka <span class="badge-tag">Tandoor Special</span></h4>
+                                    <p>Creamy, cardamom-scented chicken tikka, slow-roasted in the tandoor till juicy and tender.</p>
                                 </div>
                             </div>
-                            <span class="item-price">₹320</span>
+                            <span class="item-price">₹455</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <img src="assets/cheese_burger_card.png" alt="Cheese Burger" class="item-thumbnail">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Classic Cheese Burger & Fries</h4>
+                                    <p>A thick house-crafted vegetarian patty with melting cheese, fresh lettuce, and tomatoes, served with crisp fries.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹345</span>
                         </div>
 
                         <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
                             <div class="menu-item-left">
                                 <span class="diet-dot nonveg-dot"></span>
                                 <div class="item-title-desc">
-                                    <h4>Wings of Fire <span class="badge-signature">Fiery</span></h4>
-                                    <p>Tender sizzling chicken wings coated in hot chilli reduction, served steaming.</p>
+                                    <h4>Cheese Chicken Lollipop</h4>
+                                    <p>Juicy chicken wings shaped into lollipops, fried crispy and finished with a molten cheese coating.</p>
                                 </div>
                             </div>
-                            <span class="item-price">₹480</span>
-                        </div>
-
-                        <div class="menu-item-row glass-card veg" data-diet="veg">
-                            <div class="menu-item-left">
-                                <span class="diet-dot veg-dot"></span>
-                                <div class="item-title-desc">
-                                    <h4>Crispy Lotus Stem</h4>
-                                    <p>Crisp lotus root discs tossed in a sweet-spicy honey chilli sauce and sprinkled with toasted sesame seeds.</p>
-                                </div>
-                            </div>
-                            <span class="item-price">₹350</span>
+                            <span class="item-price">₹465</span>
                         </div>
 
                         <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
                             <div class="menu-item-left">
                                 <span class="diet-dot nonveg-dot"></span>
                                 <div class="item-title-desc">
-                                    <h4>Queen's Pod Sizzler</h4>
-                                    <p>Hot, smoky sizzler loaded with choice chicken/fish steaks, charred vegetables, and rosemary garlic potato wedges.</p>
+                                    <h4>Chicken Dry Fry</h4>
+                                    <p>Crispy, spiced chicken strips stir-fried with native chillies, curry leaves, and local ginger-garlic paste.</p>
                                 </div>
                             </div>
-                            <span class="item-price">₹650</span>
+                            <span class="item-price">₹475</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Satay Prawn Stick in BBQ Sauce</h4>
+                                    <p>Skewered prawns grilled to perfection, basted with a rich, smoky barbecue reduction glaze.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹595</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Smoked Chilli Prawn</h4>
+                                    <p>Stir-fried prawns tossed in a fiery, sweet, and smoky wok sauce with fresh scallions and bell peppers.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹595</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Murgh Seekh Kebab</h4>
+                                    <p>Minced chicken infused with fresh herbs and skewered spices, cooked inside our traditional clay tandoor oven.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹435</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Cheese Chilli Garlic Bread</h4>
+                                    <p>Artisanal sourdough topped with fresh garlic butter, sliced green chillies, and baked mozzarella.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹315</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3. Oriental & Korean -->
+                <!-- 3. Oriental & Chinese Specials -->
                 <div id="section-oriental" class="menu-section-block">
-                    <h3 class="menu-section-heading">Oriental & Korean Delights</h3>
+                    <h3 class="menu-section-heading">Oriental & Chinese Specials</h3>
                     <div class="menu-items-grid">
                         <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
                             <div class="menu-item-left">
+                                <img src="assets/chilli_fried_chicken_card.png" alt="Chilli Fried Chicken" class="item-thumbnail">
                                 <span class="diet-dot nonveg-dot"></span>
                                 <div class="item-title-desc">
-                                    <h4>Korean Spicy Ramen</h4>
-                                    <p>Rich, hot broth served with instant noodles, sliced pork belly, soft boiled egg, nori sheet, and fresh spring onion.</p>
+                                    <h4>Chilli Fried Chicken <span class="badge-tag">House Best</span></h4>
+                                    <p>Indo-Chinese style crispy fried chicken cubes tossed in a dark soy and red chilli reduction sauce.</p>
                                 </div>
                             </div>
-                            <span class="item-price">₹420</span>
+                            <span class="item-price">₹455</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <img src="assets/chicken_noodles_card.png" alt="Chicken Wok Noodles" class="item-thumbnail">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Chicken Wok Noodles (Hakka Style)</h4>
+                                    <p>Savory noodles tossed in a high-flame wok with shredded chicken, crisp cabbage, carrots, and light soy.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹515</span>
                         </div>
 
                         <div class="menu-item-row glass-card veg" data-diet="veg">
                             <div class="menu-item-left">
                                 <span class="diet-dot veg-dot"></span>
                                 <div class="item-title-desc">
-                                    <h4>Stir-Fried Tofu in Black Pepper Sauce</h4>
-                                    <p>Silken cubes of organic tofu cooked with bell peppers and onions in a sticky, peppery soy reduction.</p>
+                                    <h4>Crispy Corn Hong Kong</h4>
+                                    <p>Tender corn kernels fried till golden and crunchy, tossed with salt, pepper, and finely diced spring onions.</p>
                                 </div>
                             </div>
-                            <span class="item-price">₹380</span>
+                            <span class="item-price">₹335</span>
                         </div>
 
-                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
                             <div class="menu-item-left">
-                                <span class="diet-dot nonveg-dot"></span>
+                                <span class="diet-dot veg-dot"></span>
                                 <div class="item-title-desc">
-                                    <h4>Prawn Tempura</h4>
-                                    <p>Lighter-than-air, crispy fried prawns served with a delicate mirin soy dipping sauce.</p>
+                                    <h4>Golden Fried Chilli Baby Corn</h4>
+                                    <p>Crispy batter-fried baby corn spears tossed in a zesty, hot ginger-garlic chilli sauce.</p>
                                 </div>
                             </div>
-                            <span class="item-price">₹580</span>
+                            <span class="item-price">₹335</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Tri-Pepper Chilli Cheese (Chilli Paneer)</h4>
+                                    <p>Paneer cubes cooked with red, yellow, and green bell peppers in a classic soy-chilli gravy reduction.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹355</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Honey Chilli Potato</h4>
+                                    <p>Crispy potato strips glazed in a sweet honey and spicy red chilli sauce with sesame sprinkles.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹345</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4. Italian & Pizzas -->
+                <!-- 4. Italian Wood-Fired -->
                 <div id="section-italian" class="menu-section-block">
-                    <h3 class="menu-section-heading">Italian Wood-Fired Style</h3>
+                    <h3 class="menu-section-heading">Italian Wood-Fired style</h3>
                     <div class="menu-items-grid">
                         <div class="menu-item-row glass-card veg" data-diet="veg">
                             <div class="menu-item-left">
+                                <img src="assets/pizza_margherita_card.png" alt="Pizza Margherita" class="item-thumbnail">
                                 <span class="diet-dot veg-dot"></span>
                                 <div class="item-title-desc">
-                                    <h4>Classic Margherita Pizza</h4>
-                                    <p>Crushed San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, and extra virgin olive oil drizzle.</p>
+                                    <h4>Classic Pizza Margherita <span class="badge-tag">Sourdough</span></h4>
+                                    <p>Sourdough crust baked with San Marzano tomato spread, fresh buffalo mozzarella cheese, and sweet basil leaves.</p>
                                 </div>
                             </div>
                             <span class="item-price">₹420</span>
@@ -594,7 +673,7 @@
                                 <span class="diet-dot nonveg-dot"></span>
                                 <div class="item-title-desc">
                                     <h4>Smoky Chicken Fettuccine Alfredo</h4>
-                                    <p>Flat pasta tossed in a rich, buttery heavy cream parmesan sauce, topped with wood-grilled chicken strips.</p>
+                                    <p>Rich cream and parmesan butter alfredo sauce tossed with flat fettuccine and sliced wood-fired grilled chicken.</p>
                                 </div>
                             </div>
                             <span class="item-price">₹480</span>
@@ -602,8 +681,143 @@
                     </div>
                 </div>
 
-                <!-- 5. Bar & Crafted Mixes -->
-                <div class="bar-section-wrap" id="section-bar">
+                <!-- 5. North Indian -->
+                <div id="section-northindian" class="menu-section-block">
+                    <h3 class="menu-section-heading">Legends of North Indian Spices</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Kadhai Paneer</h4>
+                                    <p>Cottage cheese cubes tossed with capsicum, onions, and freshly ground whole spices in a semi-dry tomato gravy.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹385</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Paneer Butter Masala</h4>
+                                    <p>Rich, creamy, and mildly sweet tomato gravy with soft cottage cheese cubes and a touch of butter.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹415</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Veg Kofta</h4>
+                                    <p>Deep-fried vegetable dumplings simmered in a spiced, velvety onion-tomato gravy.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹375</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Kashmiri Chicken Kadhai</h4>
+                                    <p>Juicy chicken pieces slow-cooked with aromatic Kashmiri chillies, spices, and whole coriander seeds.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹455</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Traditional Chicken Curry</h4>
+                                    <p>Home-style slow simmered chicken recipe prepared in a classic, light onion-tomato curry base.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹435</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Egg Curry</h4>
+                                    <p>Hard-boiled eggs cooked in a flavorful, spiced onion-tomato reduction gravy.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹375</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Korean Specials -->
+                <div id="section-korean" class="menu-section-block">
+                    <h3 class="menu-section-heading">Korean Specials</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <img src="assets/veg_kimbap_card.png" alt="Veg Kimbap" class="item-thumbnail">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Yachae Kimbap (Veg Kimbap) <span class="badge-tag">Popular</span></h4>
+                                    <p>Classic Korean rice rolls filled with pickled radish, carrots, cucumber, and seaweed, rolled in sesame oil.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹455</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <img src="assets/korean_fried_chicken_card.png" alt="Korean Fried Chicken" class="item-thumbnail">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Korean Fried Chicken</h4>
+                                    <p>Twice-fried crunchy chicken bites glazed with a sweet, spicy gochujang sauce and white sesame seeds.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹505</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Korean Corn Dog</h4>
+                                    <p>Deep-fried hot dog and mozzarella cheese coated in a crispy yeast batter, finished with sugar and ketchup.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹495</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card nonveg" data-diet="nonveg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot nonveg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Spicy Ramen (Chicken)</h4>
+                                    <p>Hot, spicy Korean broth noodles served with a boiled egg, grilled chicken slices, and green onion garnishing.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹555</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card veg" data-diet="veg">
+                            <div class="menu-item-left">
+                                <span class="diet-dot veg-dot"></span>
+                                <div class="item-title-desc">
+                                    <h4>Dolsot Bibimbap</h4>
+                                    <p>Warm white rice topped with seasoned vegetables, gochujang paste, sesame oil, and served in a hot stone bowl.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹555</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Drinks & Lounge -->
+                <div class="bar-section-wrap menu-section-block" id="section-bar">
                     <div class="bar-banner">
                         <h3 class="bar-title font-accent">The Riverside Lounge Bar</h3>
                         <p>Relax by the river with our premium selection of spirits, artisanal beers, and handcrafted cocktails.</p>
@@ -611,10 +825,11 @@
                     <div class="menu-items-grid">
                         <div class="menu-item-row glass-card cocktail-item">
                             <div class="menu-item-left">
+                                <img src="assets/red_sangria_card.png" alt="Ramen Lady in Red Sangria" class="item-thumbnail">
                                 <span class="cocktail-badge">Cocktail</span>
                                 <div class="item-title-desc">
-                                    <h4>Ranikhola Sunset Sangria</h4>
-                                    <p>Muddled fresh mountain berries, white wine, local orange liquor, and organic mint sprigs.</p>
+                                    <h4>Ramen Lady in Red Sangria</h4>
+                                    <p>Our signature red wine sangria, muddled with fresh local mountain berries and hints of cinnamon.</p>
                                 </div>
                             </div>
                             <span class="item-price">₹550</span>
@@ -622,24 +837,38 @@
 
                         <div class="menu-item-row glass-card cocktail-item">
                             <div class="menu-item-left">
+                                <img src="assets/what_a_sip_card.png" alt="Signature Drink What a Sip" class="item-thumbnail">
                                 <span class="cocktail-badge">Cocktail</span>
                                 <div class="item-title-desc">
-                                    <h4>The Bamboo Mule <span class="badge-tag">Popular</span></h4>
-                                    <p>Vodka, local fresh ginger syrup, carbonated mineral water, and lime squeeze, served in a handcrafted bamboo cup.</p>
+                                    <h4>Signature Drink "What a Sip" <span class="badge-tag">House Special</span></h4>
+                                    <p>Handcrafted business special with local Sikkim cardamom, elderflower, and fresh citrus slices over ice.</p>
                                 </div>
                             </div>
-                            <span class="item-price">₹490</span>
+                            <span class="item-price">₹550</span>
                         </div>
 
                         <div class="menu-item-row glass-card cocktail-item">
                             <div class="menu-item-left">
-                                <span class="cocktail-badge">Mocktail</span>
+                                <img src="assets/tequila_shots_card.png" alt="Tequila Shots" class="item-thumbnail">
+                                <span class="cocktail-badge">Lounge</span>
                                 <div class="item-title-desc">
-                                    <h4>Sikkim Cardamom Cooler</h4>
-                                    <p>Fresh lime juice, organic brown sugar, crushed cardamom pods, and soda water.</p>
+                                    <h4>Premium Tequila Shots</h4>
+                                    <p>Imports served in chilled shot glasses, garnished with juicy fresh orange wheels and sea salt rim.</p>
                                 </div>
                             </div>
-                            <span class="item-price">₹280</span>
+                            <span class="item-price">₹450</span>
+                        </div>
+
+                        <div class="menu-item-row glass-card cocktail-item">
+                            <div class="menu-item-left">
+                                <img src="assets/cocktails_card.png" alt="Craft Cocktails" class="item-thumbnail">
+                                <span class="cocktail-badge">Cocktail</span>
+                                <div class="item-title-desc">
+                                    <h4>Sunset Citrus Punch</h4>
+                                    <p>Tropical punch with fresh orange, rum, gin, and locally sourced ginger beer foam.</p>
+                                </div>
+                            </div>
+                            <span class="item-price">₹550</span>
                         </div>
                     </div>
                 </div>
