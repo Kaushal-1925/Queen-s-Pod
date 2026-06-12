@@ -1,39 +1,73 @@
 /* ==========================================================================
    QUEEN'S POD DESIGN SYSTEM - CSS STYLESHEET
-   Bali-Inspired, Eco-Luxury, Nature-Centric Theme
+   Superpower Bioluminescent health command center Theme
    ========================================================================== */
 
 /* Design Tokens (CSS Variables) */
 :root {
-    /* Color Palette */
-    --color-teal: #1A6B5E;
-    /* Forest Teal (Primary CTAs, Headings, Nav) */
-    --color-gold: #B8862C;
-    /* Warm Gold (Accents, highlights, hovers) */
-    --color-bg: #F7F3EE;
-    /* Ivory Mist (Page backgrounds, card fills) */
-    --color-dark: #2C2416;
-    /* Deep Earth (Body text, dark backgrounds) */
-    --color-card-bg: #FDFAF6;
-    /* Stone White (Card backgrounds, input fields) */
-    --color-river: #4A8FA8;
-    /* River Blue (Decorative accent, water motif) */
+  /* Colors */
+  --color-sunrise-coral: #fc5f2b;
+  --color-coral-glow: #ff8b64;
+  --gradient-coral-glow: linear-gradient(88deg, rgb(252, 95, 43), rgb(255, 139, 100) 90%, rgb(255, 255, 255));
+  --color-carbon-black: #18181b;
+  --color-pure-black: #000000;
+  --color-zinc-gray: #71717a;
+  --color-ash-gray: #a1a1aa;
+  --color-mist-gray: #e4e4e7;
+  --color-fog-gray: #f4f4f5;
+  --color-paper-white: #ffffff;
 
-    /* Premium Glassmorphism Specs */
-    --glass-bg: rgba(253, 250, 246, 0.45);
-    --glass-border: rgba(184, 134, 44, 0.25);
-    --glass-blur: 15px;
-    --glass-shadow: 0 8px 32px 0 rgba(44, 36, 22, 0.08);
+  /* Typography — Font Families */
+  --font-nb-international-pro: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-nb-international-mono-pro: 'JetBrains Mono', ui-monospace, monospace;
 
-    /* Typography */
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Lato', system-ui, -apple-system, sans-serif;
+  /* Typography — Scale */
+  --text-caption: 11px;
+  --leading-caption: 1.5;
+  --tracking-caption: -0.005em;
+  --text-body: 15px;
+  --leading-body: 1.5;
+  --tracking-body: -0.005em;
+  --text-body-lg: 17px;
+  --leading-body-lg: 1.4;
+  --tracking-body-lg: -0.009em;
+  --text-subheading: 19px;
+  --leading-subheading: 1.4;
+  --tracking-subheading: -0.009em;
+  --text-heading-sm: 22px;
+  --leading-heading-sm: 1.25;
+  --tracking-heading-sm: -0.012em;
+  --text-heading: 30px;
+  --leading-heading: 1.2;
+  --tracking-heading: -0.013em;
+  --text-heading-lg: 45px;
+  --leading-heading-lg: 1.13;
+  --tracking-heading-lg: -0.015em;
+  --text-display: 66px;
+  --leading-display: 1;
+  --tracking-display: -0.025em;
 
-    /* Spacing & Borders */
-    --border-radius-lg: 20px;
-    --border-radius-md: 12px;
-    --border-radius-sm: 6px;
-    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-60: 60px;
+
+  /* Border Radius */
+  --radius-cards: 15px;
+  --radius-icons: 7.5px;
+  --radius-pills: 9999px;
+  --radius-navbar: 15px;
+  --radius-buttons: 9999px;
+  --radius-smallcards: 5px;
+
+  /* Shadows */
+  --shadow-subtle: rgba(0, 0, 0, 0.05) 0px 2px 2px 0px;
+
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ==========================================================================
@@ -51,31 +85,54 @@ html {
 }
 
 body {
-    background-color: var(--color-bg);
-    color: var(--color-dark);
-    font-family: var(--font-body);
+    background-color: var(--color-paper-white);
+    color: var(--color-zinc-gray);
+    font-family: var(--font-nb-international-pro);
     font-weight: 400;
-    line-height: 1.6;
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
 
 /* Typography elements */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.25;
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-nb-international-pro);
+    color: var(--color-carbon-black);
+    font-weight: 400; /* Signature whisper weight */
+}
+
+h1 {
+    font-size: var(--text-display);
+    line-height: var(--leading-display);
+    letter-spacing: var(--tracking-display);
+}
+
+h2 {
+    font-size: var(--text-heading-lg);
+    line-height: var(--leading-heading-lg);
+    letter-spacing: var(--tracking-heading-lg);
+}
+
+h3 {
+    font-size: var(--text-heading);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+}
+
+h4 {
+    font-size: var(--text-heading-sm);
+    line-height: var(--leading-heading-sm);
+    letter-spacing: var(--tracking-heading-sm);
 }
 
 p {
-    font-size: 1.05rem;
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
     font-weight: 400;
-    color: rgba(44, 36, 22, 0.85);
+    color: var(--color-zinc-gray);
 }
 
 a {
